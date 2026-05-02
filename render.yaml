@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ats-resume-expert
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port 10000 --server.address 0.0.0.0
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
